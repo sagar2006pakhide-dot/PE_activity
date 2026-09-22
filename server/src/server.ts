@@ -32,8 +32,13 @@ app.get('/', (_req, res) => {
   });
 });
 
-// Start Server
-app.listen(PORT, () => {
-  console.log(`🚀 TruthLens AI Backend Server running on http://localhost:${PORT}`);
-  console.log(`📡 Health Check: http://localhost:${PORT}/api/health`);
-});
+// Export app for Vercel serverless usage
+export default app;
+
+// Start server only when running directly (not imported by Vercel)
+if (process.env.VERCEL !== '1') {
+  app.listen(PORT, () => {
+    console.log(`🚀 TruthLens AI Backend Server running on http://localhost:${PORT}`);
+    console.log(`📡 Health Check: http://localhost:${PORT}/api/health`);
+  });
+}
