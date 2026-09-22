@@ -1,0 +1,238 @@
+[
+  {
+    "id": "saved-1",
+    "historyId": "hist-1",
+    "savedAt": "2026-09-21T13:23:56.017Z",
+    "claim": "The Earth is flat and NASA uses CGI to fabricate satellite imagery of a spherical globe.",
+    "verdict": "Likely False",
+    "notes": "Reference case for high-risk conspiracy claims regarding geodesy and space photography.",
+    "result": {
+      "id": "demo-earth-flat",
+      "inputClaim": "The Earth is flat and NASA uses CGI to fabricate satellite imagery of a spherical globe.",
+      "inputType": "text",
+      "timestamp": "2026-09-21T15:23:56.011Z",
+      "verdict": "Likely False",
+      "confidence": 97,
+      "riskLevel": "Critical",
+      "summary": "The claim that the Earth is flat contradicts centuries of direct empirical observation, global circumnavigation, geodesy, and photographic evidence from space agencies worldwide.",
+      "detailedExplanation": "This assertion is thoroughly refuted by foundational physics and modern observational science. Eratosthenes accurately estimated Earth's circumference around 240 BCE using shadow angles. Independent global navigation systems (GPS), satellite telecommunications, high-altitude commercial flights, and lunar eclipses all require an oblate spheroid Earth model to function. The hypothesis of global photographic fabrication by space agencies is unsupported by credible evidence.",
+      "claimsBreakdown": [
+        {
+          "id": "c1",
+          "claim": "The Earth is flat rather than spherical or oblate spheroid.",
+          "verdict": "Likely False",
+          "confidence": 99,
+          "evidence": "Planetary geodesy, gravitational physics, lunar eclipse shadow geometry, and independent satellite telemetry from multiple sovereign nations confirm an oblate spheroid shape.",
+          "counterEvidence": "Flat Earth claims rely on selective visual horizon observations without compensating for atmospheric refraction or scale."
+        },
+        {
+          "id": "c2",
+          "claim": "NASA and space agencies rely exclusively on CGI to simulate a spherical Earth.",
+          "verdict": "Likely False",
+          "confidence": 96,
+          "evidence": "Analog photographic records predating digital CGI (such as the 1972 Apollo 17 \"Blue Marble\" photograph on 70mm Hasselblad film) directly capture Earth's curvature.",
+          "counterEvidence": "Conspiracy theories posit universal institutional collusion across competing nations (USA, ESA, JAXA, ISRO, CNSA, Roscosmos)."
+        }
+      ],
+      "clickbait": {
+        "risk": "High",
+        "score": 84,
+        "signalsDetected": [
+          "Conspiracy rhetoric (\"NASA uses CGI to fabricate\")",
+          "Binary absolute denial of consensus reality",
+          "Distrust-inducing institutional framing"
+        ],
+        "explanation": "Uses sensational anti-institutional narratives intended to provoke cognitive dissonance and engagement through conspiracy theory tropes."
+      },
+      "sources": [
+        {
+          "id": "s1",
+          "name": "NASA Earth Observatory",
+          "title": "Geodesy: The Science of Measuring Earth's Shape",
+          "url": "https://earthobservatory.nasa.gov",
+          "date": "2024-03-15",
+          "category": "Contradicts Claim",
+          "reliabilityScore": 98,
+          "publisherType": "Government Agency",
+          "credibilityFactors": {
+            "transparency": true,
+            "authorAttribution": true,
+            "peerReviewedOrFactChecked": true,
+            "primarySource": true
+          },
+          "snippet": "Satellite altimetry and gravimetric mapping continuously measure Earth as an oblate spheroid with an equatorial radius of 6,378.1 km."
+        },
+        {
+          "id": "s2",
+          "name": "Royal Astronomical Society",
+          "title": "Historical Geodesy: From Eratosthenes to Modern Satellites",
+          "url": "https://ras.ac.uk",
+          "date": "2023-11-20",
+          "category": "Contradicts Claim",
+          "reliabilityScore": 95,
+          "publisherType": "Academic Institution",
+          "credibilityFactors": {
+            "transparency": true,
+            "authorAttribution": true,
+            "peerReviewedOrFactChecked": true,
+            "primarySource": false
+          },
+          "snippet": "Observable lunar eclipses project a circular shadow at every celestial orientation, geometrically achievable only by a spherical body."
+        },
+        {
+          "id": "s3",
+          "name": "European Space Agency (ESA)",
+          "title": "Earth Observation Fleet Telemetry & Orbit Dynamics",
+          "url": "https://www.esa.int",
+          "date": "2024-01-10",
+          "category": "Contradicts Claim",
+          "reliabilityScore": 96,
+          "publisherType": "Government Agency",
+          "credibilityFactors": {
+            "transparency": true,
+            "authorAttribution": true,
+            "peerReviewedOrFactChecked": true,
+            "primarySource": true
+          },
+          "snippet": "Low Earth Orbit (LEO) orbital periods directly depend on gravitational mass calculations that presuppose a 3D spherical mass distribution."
+        }
+      ],
+      "sourceCredibility": {
+        "sourceTransparency": 96,
+        "authorInformation": 94,
+        "crossSourceAgreement": 98,
+        "primarySourceRatio": 90,
+        "citationQuality": 95,
+        "summary": "Broad, independent consensus among global aerospace agencies, academic observatories, and historical geodetic literature."
+      },
+      "explainableAI": {
+        "evidenceFound": [],
+        "contradictingEvidence": [
+          "Geodetic measurements from thousands of independent ground and orbital stations",
+          "Lunar eclipse shadow curvature documented continuously across millennia",
+          "International commercial airline navigation trajectories"
+        ],
+        "linguisticPatterns": [
+          "Anti-establishment framing",
+          "CGI fabrication accusation without technical forensic backing"
+        ],
+        "sourceAgreement": "Unanimous scientific consensus across all surveyed aerospace and physical science bodies.",
+        "missingInformation": [
+          "Any peer-reviewed physical model explaining gravity or eclipses under flat geometry"
+        ]
+      },
+      "isDemoMode": true,
+      "disclaimer": "This assessment is generated by TruthLens AI based on current scientific consensus and verified reference data. AI outputs should not be treated as absolute proof without consulting primary academic literature."
+    }
+  },
+  {
+    "id": "saved-2",
+    "historyId": "hist-3",
+    "savedAt": "2026-09-21T07:23:56.017Z",
+    "claim": "Startup introduces QuantumBattery 5000 that charges smartphones in 3 seconds and lasts 10 years with 0% degradation.",
+    "verdict": "Potentially Misleading",
+    "notes": "Important example of venture-capital breakthrough marketing outstripping thermodynamic physical reality.",
+    "result": {
+      "id": "demo-quantum-battery",
+      "inputClaim": "Startup introduces QuantumBattery 5000 that charges smartphones in 3 seconds and lasts 10 years with 0% degradation.",
+      "inputType": "text",
+      "timestamp": "2026-09-21T15:23:56.014Z",
+      "verdict": "Potentially Misleading",
+      "confidence": 84,
+      "riskLevel": "Moderate",
+      "summary": "While solid-state and quantum-dot energy storage research is progressing in academic laboratories, claims of a commercially available smartphone battery charging in 3 seconds with zero degradation over a decade are commercially unsubstantiated and physically implausible under current infrastructure.",
+      "detailedExplanation": "Charging a standard 4000mAh smartphone battery in 3 seconds would require approximately 18 kilowatts of instantaneous power—equivalent to 75 residential wall chargers simultaneously—generating extreme thermal dissipation that would destroy consumer devices without cryogenic cooling. The startup’s press announcement appears to exaggerate early-stage microscopic quantum capacitor experiments without third-party laboratory verification or safety certifications.",
+      "claimsBreakdown": [
+        {
+          "id": "c1",
+          "claim": "Quantum battery technology charges consumer phones in 3 seconds.",
+          "verdict": "Likely False",
+          "confidence": 89,
+          "evidence": "Ohmic heating and power delivery limitations of standard USB-C cables (max 240W) physically prevent delivering ~18kW of power in 3 seconds safely.",
+          "counterEvidence": "Microscopic supercapacitors charge rapidly in laboratory vacuum chambers, but have minuscule volumetric energy density."
+        },
+        {
+          "id": "c2",
+          "claim": "The battery operates for 10 years with zero degradation.",
+          "verdict": "Potentially Misleading",
+          "confidence": 82,
+          "evidence": "All electrochemical and electrostatic storage mediums experience entropy-driven electrode degradation, dielectric breakdown, or thermal fatigue over repeated cycling."
+        }
+      ],
+      "clickbait": {
+        "risk": "High",
+        "score": 78,
+        "signalsDetected": [
+          "Hyperbolic performance numbers (\"3 seconds\", \"zero degradation\")",
+          "Commercial availability conflated with theoretical physics",
+          "Exaggerated technological breakthrough framing"
+        ],
+        "explanation": "Uses breakthrough-fever hype to attract venture capital and virality without presenting peer-reviewed prototype data."
+      },
+      "sources": [
+        {
+          "id": "s1",
+          "name": "IEEE Spectrum",
+          "title": "The Real Limits of Ultrafast Battery Charging",
+          "url": "https://spectrum.ieee.org",
+          "date": "2024-02-14",
+          "category": "Provides Context",
+          "reliabilityScore": 92,
+          "publisherType": "Academic Institution",
+          "credibilityFactors": {
+            "transparency": true,
+            "authorAttribution": true,
+            "peerReviewedOrFactChecked": true,
+            "primarySource": false
+          },
+          "snippet": "Thermal runaway and dendrite formation remain strict physical barriers to charging lithium and solid-state cells under extreme C-rates."
+        },
+        {
+          "id": "s2",
+          "name": "Nature Energy",
+          "title": "Theoretical Bounds on Quantum Energy Storage Systems",
+          "url": "https://www.nature.com/nenergy",
+          "date": "2023-10-05",
+          "category": "Contradicts Claim",
+          "reliabilityScore": 97,
+          "publisherType": "Peer-Reviewed Journal",
+          "credibilityFactors": {
+            "transparency": true,
+            "authorAttribution": true,
+            "peerReviewedOrFactChecked": true,
+            "primarySource": true
+          },
+          "snippet": "Macroscopic quantum battery synchronization has not been realized outside specialized sub-Kelvin photonic setups."
+        }
+      ],
+      "sourceCredibility": {
+        "sourceTransparency": 68,
+        "authorInformation": 75,
+        "crossSourceAgreement": 45,
+        "primarySourceRatio": 60,
+        "citationQuality": 62,
+        "summary": "High disparity between theoretical quantum energy research and marketing claims by commercial startup."
+      },
+      "explainableAI": {
+        "evidenceFound": [
+          "Theoretical papers on quantum entanglement in quantum battery charging protocols"
+        ],
+        "contradictingEvidence": [
+          "Electrical grid and consumer cable thermal limitations",
+          "Thermodynamic second-law constraints on 100% cycling retention"
+        ],
+        "linguisticPatterns": [
+          "Venture marketing jargon",
+          "Absolute promises (zero degradation, instant charge)"
+        ],
+        "sourceAgreement": "Scientific journals contradict the commercial readiness and performance figures promoted in the claim.",
+        "missingInformation": [
+          "Independent UL or CE battery safety certifications",
+          "Published empirical cycle-life curves"
+        ]
+      },
+      "isDemoMode": true,
+      "disclaimer": "This assessment is generated by TruthLens AI. Emerging technologies require independent laboratory validation."
+    }
+  }
+]

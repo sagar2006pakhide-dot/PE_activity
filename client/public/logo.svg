@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <defs>
+    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366f1" />
+      <stop offset="50%" stop-color="#4f46e5" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+    <linearGradient id="checkGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#e0e7ff" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#6366f1" flood-opacity="0.4" />
+    </filter>
+  </defs>
+
+  <!-- Outer Shield -->
+  <path d="M50 8L82 22V50C82 70 50 92 50 92C50 92 18 70 18 50V22L50 8Z" 
+        fill="url(#shieldGrad)" 
+        filter="url(#glow)" />
+
+  <!-- Inner Shield Highlight -->
+  <path d="M50 14L76 25.5V50C76 66.5 50 85 50 85C50 85 24 66.5 24 50V25.5L50 14Z" 
+        fill="none" 
+        stroke="rgba(255,255,255,0.25)" 
+        stroke-width="2" />
+
+  <!-- Verified Check Mark -->
+  <path d="M36 50L46 60L65 38" 
+        stroke="url(#checkGrad)" 
+        stroke-width="7" 
+        stroke-linecap="round" 
+        stroke-linejoin="round" />
+
+  <!-- AI Sparkles / Stars -->
+  <!-- Top Right Spark -->
+  <path d="M80 16L82 22L88 24L82 26L80 32L78 26L72 24L78 22Z" fill="#38bdf8" />
+  <!-- Bottom Left Spark -->
+  <path d="M22 68L23.5 73L28 74.5L23.5 76L22 81L20.5 76L16 74.5L20.5 73Z" fill="#a855f7" />
+  <!-- Mini Spark -->
+  <circle cx="78" cy="42" r="2.5" fill="#facc15" />
+</svg>

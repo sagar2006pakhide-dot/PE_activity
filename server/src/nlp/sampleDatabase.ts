@@ -1,0 +1,630 @@
+import { FactCheckResult } from '../types/index.js';
+
+export const sampleFactChecks: FactCheckResult[] = [
+  {
+    id: 'demo-earth-flat',
+    inputClaim: 'The Earth is flat and NASA uses CGI to fabricate satellite imagery of a spherical globe.',
+    inputType: 'text',
+    timestamp: new Date().toISOString(),
+    verdict: 'Likely False',
+    confidence: 97,
+    riskLevel: 'Critical',
+    summary: 'The claim that the Earth is flat contradicts centuries of direct empirical observation, global circumnavigation, geodesy, and photographic evidence from space agencies worldwide.',
+    detailedExplanation: 'This assertion is thoroughly refuted by foundational physics and modern observational science. Eratosthenes accurately estimated Earth\'s circumference around 240 BCE using shadow angles. Independent global navigation systems (GPS), satellite telecommunications, high-altitude commercial flights, and lunar eclipses all require an oblate spheroid Earth model to function. The hypothesis of global photographic fabrication by space agencies is unsupported by credible evidence.',
+    claimsBreakdown: [
+      {
+        id: 'c1',
+        claim: 'The Earth is flat rather than spherical or oblate spheroid.',
+        verdict: 'Likely False',
+        confidence: 99,
+        evidence: 'Planetary geodesy, gravitational physics, lunar eclipse shadow geometry, and independent satellite telemetry from multiple sovereign nations confirm an oblate spheroid shape.',
+        counterEvidence: 'Flat Earth claims rely on selective visual horizon observations without compensating for atmospheric refraction or scale.'
+      },
+      {
+        id: 'c2',
+        claim: 'NASA and space agencies rely exclusively on CGI to simulate a spherical Earth.',
+        verdict: 'Likely False',
+        confidence: 96,
+        evidence: 'Analog photographic records predating digital CGI (such as the 1972 Apollo 17 "Blue Marble" photograph on 70mm Hasselblad film) directly capture Earth\'s curvature.',
+        counterEvidence: 'Conspiracy theories posit universal institutional collusion across competing nations (USA, ESA, JAXA, ISRO, CNSA, Roscosmos).'
+      }
+    ],
+    clickbait: {
+      risk: 'High',
+      score: 84,
+      signalsDetected: [
+        'Conspiracy rhetoric ("NASA uses CGI to fabricate")',
+        'Binary absolute denial of consensus reality',
+        'Distrust-inducing institutional framing'
+      ],
+      explanation: 'Uses sensational anti-institutional narratives intended to provoke cognitive dissonance and engagement through conspiracy theory tropes.'
+    },
+    sources: [
+      {
+        id: 's1',
+        name: 'NASA Earth Observatory',
+        title: 'Geodesy: The Science of Measuring Earth\'s Shape',
+        url: 'https://earthobservatory.nasa.gov',
+        date: '2024-03-15',
+        category: 'Contradicts Claim',
+        reliabilityScore: 98,
+        publisherType: 'Government Agency',
+        credibilityFactors: {
+          transparency: true,
+          authorAttribution: true,
+          peerReviewedOrFactChecked: true,
+          primarySource: true
+        },
+        snippet: 'Satellite altimetry and gravimetric mapping continuously measure Earth as an oblate spheroid with an equatorial radius of 6,378.1 km.'
+      },
+      {
+        id: 's2',
+        name: 'Royal Astronomical Society',
+        title: 'Historical Geodesy: From Eratosthenes to Modern Satellites',
+        url: 'https://ras.ac.uk',
+        date: '2023-11-20',
+        category: 'Contradicts Claim',
+        reliabilityScore: 95,
+        publisherType: 'Academic Institution',
+        credibilityFactors: {
+          transparency: true,
+          authorAttribution: true,
+          peerReviewedOrFactChecked: true,
+          primarySource: false
+        },
+        snippet: 'Observable lunar eclipses project a circular shadow at every celestial orientation, geometrically achievable only by a spherical body.'
+      },
+      {
+        id: 's3',
+        name: 'European Space Agency (ESA)',
+        title: 'Earth Observation Fleet Telemetry & Orbit Dynamics',
+        url: 'https://www.esa.int',
+        date: '2024-01-10',
+        category: 'Contradicts Claim',
+        reliabilityScore: 96,
+        publisherType: 'Government Agency',
+        credibilityFactors: {
+          transparency: true,
+          authorAttribution: true,
+          peerReviewedOrFactChecked: true,
+          primarySource: true
+        },
+        snippet: 'Low Earth Orbit (LEO) orbital periods directly depend on gravitational mass calculations that presuppose a 3D spherical mass distribution.'
+      }
+    ],
+    sourceCredibility: {
+      sourceTransparency: 96,
+      authorInformation: 94,
+      crossSourceAgreement: 98,
+      primarySourceRatio: 90,
+      citationQuality: 95,
+      summary: 'Broad, independent consensus among global aerospace agencies, academic observatories, and historical geodetic literature.'
+    },
+    explainableAI: {
+      evidenceFound: [],
+      contradictingEvidence: [
+        'Geodetic measurements from thousands of independent ground and orbital stations',
+        'Lunar eclipse shadow curvature documented continuously across millennia',
+        'International commercial airline navigation trajectories'
+      ],
+      linguisticPatterns: [
+        'Anti-establishment framing',
+        'CGI fabrication accusation without technical forensic backing'
+      ],
+      sourceAgreement: 'Unanimous scientific consensus across all surveyed aerospace and physical science bodies.',
+      missingInformation: [
+        'Any peer-reviewed physical model explaining gravity or eclipses under flat geometry'
+      ]
+    },
+    isDemoMode: true,
+    disclaimer: 'This assessment is generated by TruthLens AI based on current scientific consensus and verified reference data. AI outputs should not be treated as absolute proof without consulting primary academic literature.'
+  },
+  {
+    id: 'demo-water-hydration',
+    inputClaim: 'Drinking adequate water daily is essential for human cellular function, kidney filtration, and thermoregulation.',
+    inputType: 'text',
+    timestamp: new Date().toISOString(),
+    verdict: 'Likely Reliable',
+    confidence: 94,
+    riskLevel: 'Low',
+    summary: 'The statement accurately reflects well-established medical and biological consensus regarding water intake, kidney clearance, cellular osmotic balance, and bodily temperature regulation.',
+    detailedExplanation: 'Human physiology establishes water as the primary solvent for biochemical reactions, maintaining cellular homeostasis, flushing metabolic wastes via glomerular filtration in the kidneys, and cooling the body through eccrine perspiration. Peer-reviewed literature from the World Health Organization (WHO), National Academies of Sciences, Engineering, and Medicine (NASEM), and Harvard Medical School corroborates this assessment without dispute.',
+    claimsBreakdown: [
+      {
+        id: 'c1',
+        claim: 'Water is essential for human cellular biochemical functions.',
+        verdict: 'Likely Reliable',
+        confidence: 96,
+        evidence: 'Cellular metabolism and enzymatic actions require an aqueous environment; water constitutes roughly 60% of adult human body weight.',
+      },
+      {
+        id: 'c2',
+        claim: 'Water assists kidney filtration and thermoregulation.',
+        verdict: 'Likely Reliable',
+        confidence: 93,
+        evidence: 'Sufficient fluid volume maintains adequate renal perfusion pressure to excrete urea and electrolytes, while sweat vaporization dissipates excess thermal energy.',
+      }
+    ],
+    clickbait: {
+      risk: 'Low',
+      score: 12,
+      signalsDetected: [
+        'Objective biological terminology',
+        'Absence of superlative or miracle-cure claims'
+      ],
+      explanation: 'Text contains informative, measured, non-sensational scientific terminology with no emotional triggers.'
+    },
+    sources: [
+      {
+        id: 's1',
+        name: 'Harvard T.H. Chan School of Public Health',
+        title: 'The Importance of Hydration in Human Physiology',
+        url: 'https://www.hsph.harvard.edu',
+        date: '2023-08-12',
+        category: 'Supports Claim',
+        reliabilityScore: 96,
+        publisherType: 'Academic Institution',
+        credibilityFactors: {
+          transparency: true,
+          authorAttribution: true,
+          peerReviewedOrFactChecked: true,
+          primarySource: true
+        },
+        snippet: 'Water regulates body temperature, keeps joints lubricated, prevents infections, delivers nutrients to cells, and keeps organs functioning properly.'
+      },
+      {
+        id: 's2',
+        name: 'National Institutes of Health (NIH)',
+        title: 'Fluid Homeostasis and Renal Clearance Guidelines',
+        url: 'https://www.nih.gov',
+        date: '2023-04-19',
+        category: 'Supports Claim',
+        reliabilityScore: 98,
+        publisherType: 'Government Agency',
+        credibilityFactors: {
+          transparency: true,
+          authorAttribution: true,
+          peerReviewedOrFactChecked: true,
+          primarySource: true
+        },
+        snippet: 'Adequate hydration supports renal blood flow and prevents kidney injury and nephrolithiasis.'
+      }
+    ],
+    sourceCredibility: {
+      sourceTransparency: 98,
+      authorInformation: 96,
+      crossSourceAgreement: 99,
+      primarySourceRatio: 92,
+      citationQuality: 97,
+      summary: 'Broadly supported by gold-standard peer-reviewed medical institutions and public health guidelines.'
+    },
+    explainableAI: {
+      evidenceFound: [
+        'NASEM Dietary Reference Intakes for Water',
+        'Renal physiology textbooks and clinical guidelines'
+      ],
+      contradictingEvidence: [],
+      linguisticPatterns: [
+        'Standard biomedical vocabulary',
+        'Absence of hyperbole'
+      ],
+      sourceAgreement: 'Overwhelming agreement across peer-reviewed physiology sources.',
+      missingInformation: [
+        'Optimal daily water intake varies by age, sex, ambient temperature, and exertion level.'
+      ]
+    },
+    isDemoMode: true,
+    disclaimer: 'This assessment is generated by TruthLens AI based on medical consensus. It does not constitute medical advice.'
+  },
+  {
+    id: 'demo-quantum-battery',
+    inputClaim: 'Startup introduces QuantumBattery 5000 that charges smartphones in 3 seconds and lasts 10 years with 0% degradation.',
+    inputType: 'text',
+    timestamp: new Date().toISOString(),
+    verdict: 'Potentially Misleading',
+    confidence: 84,
+    riskLevel: 'Moderate',
+    summary: 'While solid-state and quantum-dot energy storage research is progressing in academic laboratories, claims of a commercially available smartphone battery charging in 3 seconds with zero degradation over a decade are commercially unsubstantiated and physically implausible under current infrastructure.',
+    detailedExplanation: 'Charging a standard 4000mAh smartphone battery in 3 seconds would require approximately 18 kilowatts of instantaneous power—equivalent to 75 residential wall chargers simultaneously—generating extreme thermal dissipation that would destroy consumer devices without cryogenic cooling. The startup’s press announcement appears to exaggerate early-stage microscopic quantum capacitor experiments without third-party laboratory verification or safety certifications.',
+    claimsBreakdown: [
+      {
+        id: 'c1',
+        claim: 'Quantum battery technology charges consumer phones in 3 seconds.',
+        verdict: 'Likely False',
+        confidence: 89,
+        evidence: 'Ohmic heating and power delivery limitations of standard USB-C cables (max 240W) physically prevent delivering ~18kW of power in 3 seconds safely.',
+        counterEvidence: 'Microscopic supercapacitors charge rapidly in laboratory vacuum chambers, but have minuscule volumetric energy density.'
+      },
+      {
+        id: 'c2',
+        claim: 'The battery operates for 10 years with zero degradation.',
+        verdict: 'Potentially Misleading',
+        confidence: 82,
+        evidence: 'All electrochemical and electrostatic storage mediums experience entropy-driven electrode degradation, dielectric breakdown, or thermal fatigue over repeated cycling.',
+      }
+    ],
+    clickbait: {
+      risk: 'High',
+      score: 78,
+      signalsDetected: [
+        'Hyperbolic performance numbers ("3 seconds", "zero degradation")',
+        'Commercial availability conflated with theoretical physics',
+        'Exaggerated technological breakthrough framing'
+      ],
+      explanation: 'Uses breakthrough-fever hype to attract venture capital and virality without presenting peer-reviewed prototype data.'
+    },
+    sources: [
+      {
+        id: 's1',
+        name: 'IEEE Spectrum',
+        title: 'The Real Limits of Ultrafast Battery Charging',
+        url: 'https://spectrum.ieee.org',
+        date: '2024-02-14',
+        category: 'Provides Context',
+        reliabilityScore: 92,
+        publisherType: 'Academic Institution',
+        credibilityFactors: {
+          transparency: true,
+          authorAttribution: true,
+          peerReviewedOrFactChecked: true,
+          primarySource: false
+        },
+        snippet: 'Thermal runaway and dendrite formation remain strict physical barriers to charging lithium and solid-state cells under extreme C-rates.'
+      },
+      {
+        id: 's2',
+        name: 'Nature Energy',
+        title: 'Theoretical Bounds on Quantum Energy Storage Systems',
+        url: 'https://www.nature.com/nenergy',
+        date: '2023-10-05',
+        category: 'Contradicts Claim',
+        reliabilityScore: 97,
+        publisherType: 'Peer-Reviewed Journal',
+        credibilityFactors: {
+          transparency: true,
+          authorAttribution: true,
+          peerReviewedOrFactChecked: true,
+          primarySource: true
+        },
+        snippet: 'Macroscopic quantum battery synchronization has not been realized outside specialized sub-Kelvin photonic setups.'
+      }
+    ],
+    sourceCredibility: {
+      sourceTransparency: 68,
+      authorInformation: 75,
+      crossSourceAgreement: 45,
+      primarySourceRatio: 60,
+      citationQuality: 62,
+      summary: 'High disparity between theoretical quantum energy research and marketing claims by commercial startup.'
+    },
+    explainableAI: {
+      evidenceFound: [
+        'Theoretical papers on quantum entanglement in quantum battery charging protocols'
+      ],
+      contradictingEvidence: [
+        'Electrical grid and consumer cable thermal limitations',
+        'Thermodynamic second-law constraints on 100% cycling retention'
+      ],
+      linguisticPatterns: [
+        'Venture marketing jargon',
+        'Absolute promises (zero degradation, instant charge)'
+      ],
+      sourceAgreement: 'Scientific journals contradict the commercial readiness and performance figures promoted in the claim.',
+      missingInformation: [
+        'Independent UL or CE battery safety certifications',
+        'Published empirical cycle-life curves'
+      ]
+    },
+    isDemoMode: true,
+    disclaimer: 'This assessment is generated by TruthLens AI. Emerging technologies require independent laboratory validation.'
+  },
+  {
+    id: 'demo-clickbait-fruit',
+    inputClaim: 'SHOCKING: Secret fruit that Big Pharma wants BANNED cures aging and cleans arteries in 48 hours!',
+    inputType: 'text',
+    timestamp: new Date().toISOString(),
+    verdict: 'Likely False',
+    confidence: 96,
+    riskLevel: 'Critical',
+    summary: 'Classic deceptive health clickbait. No single fruit or substance can biologically reverse cellular aging or eliminate arterial plaque in 48 hours, and allegations of systematic industry suppression are unevidenced sales tactics.',
+    detailedExplanation: 'Arteriosclerosis and biological aging are multifactorial degenerative processes involving telomere shortening, epigenetic drift, cellular senescence, and chronic vascular inflammation. Dissolving arterial lipid cores in 48 hours is biologically impossible without fatal plaque rupture and thrombosis. Such headlines typically funnel readers toward unregulated dietary supplement affiliate schemes using fabricated doctor endorsements.',
+    claimsBreakdown: [
+      {
+        id: 'c1',
+        claim: 'A secret fruit reverses cellular aging in 48 hours.',
+        verdict: 'Likely False',
+        confidence: 98,
+        evidence: 'Human cellular aging involves genomic and metabolic pathways that cannot be reversed within two days by dietary polyphenols.',
+      },
+      {
+        id: 'c2',
+        claim: 'The fruit rapidly dissolves arterial plaque within 48 hours.',
+        verdict: 'Likely False',
+        confidence: 97,
+        evidence: 'Rapid plaque dislodgement would trigger acute myocardial infarction or stroke; calcified vascular deposits require long-term lipid management.',
+      },
+      {
+        id: 'c3',
+        claim: 'The medical establishment and pharmaceutical companies are actively banning this cure.',
+        verdict: 'Likely False',
+        confidence: 94,
+        evidence: 'No regulatory ban on fruits exists in FDA/EMA databases. Conspiratorial suppression narratives are standard deceptive marketing ploys.',
+      }
+    ],
+    clickbait: {
+      risk: 'High',
+      score: 98,
+      signalsDetected: [
+        'All-caps emotional trigger word: "SHOCKING"',
+        'Conspiracy trope: "Big Pharma wants BANNED"',
+        'Miracle cure promise: "cures aging in 48 hours"',
+        'Hyperbolic timeframe: "in 48 hours"',
+        'Missing scientific name or botanical specificity'
+      ],
+      explanation: 'Maximally flagged clickbait: Combines acute urgency, conspiracy victimhood, and medical impossibility to manipulate consumer behavior.'
+    },
+    sources: [
+      {
+        id: 's1',
+        name: 'American Heart Association (AHA)',
+        title: 'Atherosclerosis Pathophysiology and Evidence-Based Management',
+        url: 'https://www.heart.org',
+        date: '2023-09-01',
+        category: 'Contradicts Claim',
+        reliabilityScore: 97,
+        publisherType: 'Peer-Reviewed Journal',
+        credibilityFactors: {
+          transparency: true,
+          authorAttribution: true,
+          peerReviewedOrFactChecked: true,
+          primarySource: true
+        },
+        snippet: 'Atherosclerotic regression requires sustained, multi-month lipid-lowering and endothelial stabilization, not rapid-dissolution remedies.'
+      },
+      {
+        id: 's2',
+        name: 'U.S. Federal Trade Commission (FTC)',
+        title: 'Health Fraud Scams & Miracle Cure Red Flags',
+        url: 'https://www.ftc.gov',
+        date: '2024-01-08',
+        category: 'Provides Context',
+        reliabilityScore: 95,
+        publisherType: 'Government Agency',
+        credibilityFactors: {
+          transparency: true,
+          authorAttribution: true,
+          peerReviewedOrFactChecked: true,
+          primarySource: true
+        },
+        snippet: 'FTC warnings identify claims of "cures in 48 hours" and "banned by Big Pharma" as hallmark indicators of deceptive supplement fraud.'
+      }
+    ],
+    sourceCredibility: {
+      sourceTransparency: 15,
+      authorInformation: 10,
+      crossSourceAgreement: 5,
+      primarySourceRatio: 0,
+      citationQuality: 8,
+      summary: 'Zero verifiable author or clinical trial data; standard deceptive affiliate marketing patterns.'
+    },
+    explainableAI: {
+      evidenceFound: [],
+      contradictingEvidence: [
+        'AHA clinical cardiology guidelines on arterial plaque stability',
+        'FTC warnings on deceptive herbal scam terminology'
+      ],
+      linguisticPatterns: [
+        'All-caps alarmist headers',
+        'Conspiracy scapegoating ("Big Pharma")',
+        'Unrealistic speed guarantees ("48 hours")'
+      ],
+      sourceAgreement: 'Unanimous condemnation across clinical health agencies.',
+      missingInformation: [
+        'Name of the fruit or active chemical compound',
+        'Double-blind randomized controlled human trials'
+      ]
+    },
+    isDemoMode: true,
+    disclaimer: 'This assessment is generated by TruthLens AI. Consult licensed medical professionals for cardiovascular and health conditions.'
+  },
+  {
+    id: 'demo-coffee-health',
+    inputClaim: 'Regular coffee consumption drastically decreases risk of cardiovascular death, but other studies claim it induces dangerous chronic hypertension.',
+    inputType: 'text',
+    timestamp: new Date().toISOString(),
+    verdict: 'Requires Verification',
+    confidence: 76,
+    riskLevel: 'Moderate',
+    summary: 'Epidemiological evidence is nuanced: Moderate coffee consumption (2–4 cups/day) is associated with reduced all-cause and cardiovascular mortality in large cohort studies, yet acute caffeine intake can transiently elevate blood pressure in sensitive individuals. Individual genetics (CYP1A2 enzyme rate) significantly modulate the outcome.',
+    detailedExplanation: 'This claim reflects a genuine ongoing scientific discussion rather than simple falsehood. Large prospective cohort analyses (e.g., the UK Biobank study of 450,000 participants) demonstrate an inverse association between moderate coffee consumption and cardiovascular disease. However, fast versus slow caffeine metabolizers experience differing vascular responses, and unfiltered coffee (containing diterpenes like cafestol) can raise LDL cholesterol. The claim therefore requires contextual qualification rather than a binary true/false judgment.',
+    claimsBreakdown: [
+      {
+        id: 'c1',
+        claim: 'Coffee consumption is associated with reduced cardiovascular mortality.',
+        verdict: 'Likely Reliable',
+        confidence: 85,
+        evidence: 'Large meta-analyses in Annals of Internal Medicine show 2-3 cups daily correlate with 10-15% lower risk of cardiovascular mortality.',
+      },
+      {
+        id: 'c2',
+        claim: 'Coffee consumption causes chronic dangerous hypertension.',
+        verdict: 'Requires Verification',
+        confidence: 72,
+        evidence: 'Acute caffeine ingestion temporarily raises systolic pressure by 5-10 mmHg, but habitual drinkers usually develop tolerance without chronic hypertension in healthy populations.',
+        counterEvidence: 'Individuals with preexisting uncontrolled hypertension or slow CYP1A2 genotype may exhibit sustained pressure elevations.'
+      }
+    ],
+    clickbait: {
+      risk: 'Medium',
+      score: 42,
+      signalsDetected: [
+        'Polarizing contrast ("drastically decreases" vs "dangerous chronic hypertension")',
+        'Sensational modifier ("drastically")'
+      ],
+      explanation: 'Juxtaposes two competing findings using heightened adjectives, though both reflect authentic medical literature under specific conditions.'
+    },
+    sources: [
+      {
+        id: 's1',
+        name: 'Annals of Internal Medicine',
+        title: 'Association of Sugar-Sweetened, Artificially Sweetened, and Unsweetened Coffee With All-Cause and Cause-Specific Mortality',
+        url: 'https://www.acpjournals.org',
+        date: '2023-05-16',
+        category: 'Supports Claim',
+        reliabilityScore: 94,
+        publisherType: 'Peer-Reviewed Journal',
+        credibilityFactors: {
+          transparency: true,
+          authorAttribution: true,
+          peerReviewedOrFactChecked: true,
+          primarySource: true
+        },
+        snippet: 'Moderate consumption of unsweetened coffee was associated with lower risk of death from cardiovascular causes in long-term observational follow-up.'
+      },
+      {
+        id: 's2',
+        name: 'Journal of Hypertension',
+        title: 'Hemodynamic Effects of Caffeine and Habitual Coffee Consumption',
+        url: 'https://journals.lww.com/jhypertension',
+        date: '2023-02-11',
+        category: 'Provides Context',
+        reliabilityScore: 91,
+        publisherType: 'Peer-Reviewed Journal',
+        credibilityFactors: {
+          transparency: true,
+          authorAttribution: true,
+          peerReviewedOrFactChecked: true,
+          primarySource: true
+        },
+        snippet: 'Transient arterial stiffness occurs following acute bolus caffeine doses, but habitual drinkers show attenuated long-term hypertensive shifts.'
+      }
+    ],
+    sourceCredibility: {
+      sourceTransparency: 94,
+      authorInformation: 92,
+      crossSourceAgreement: 65,
+      primarySourceRatio: 88,
+      citationQuality: 92,
+      summary: 'Legitimate peer-reviewed studies show diverging effects depending on dosage, preparation method, and genetic metabolic differences.'
+    },
+    explainableAI: {
+      evidenceFound: [
+        'UK Biobank cardiovascular observational datasets',
+        'Meta-analyses on dietary polyphenols in coffee'
+      ],
+      contradictingEvidence: [
+        'Clinical trials showing acute vasoconstriction from caffeine'
+      ],
+      linguisticPatterns: [
+        'Dualist contrast format',
+        'Generalizing observational correlation to direct clinical causation'
+      ],
+      sourceAgreement: 'Moderate consensus that moderate intake is safe or beneficial for most, with specific caveats for hypertensive patients.',
+      missingInformation: [
+        'Distinction between filtered paper brew and unfiltered espresso/French press',
+        'Patient genetic profile (CYP1A2 caffeine metabolism rate)'
+      ]
+    },
+    isDemoMode: true,
+    disclaimer: 'This assessment is generated by TruthLens AI. Nutritional epidemiology involves observational confounding factors.'
+  },
+  {
+    id: 'demo-mars-ruins',
+    inputClaim: 'Leaked NASA video from Perseverance rover exposes ancient megalithic ruins and stone structures on Mars.',
+    inputType: 'image',
+    timestamp: new Date().toISOString(),
+    verdict: 'Likely False',
+    confidence: 95,
+    riskLevel: 'High',
+    summary: 'The purported video relies on pareidolia (the psychological tendency to perceive familiar patterns like faces or buildings in random shapes), digital image filtering, or AI generative synthesis applied to public Mars Mastcam-Z raw geology photos.',
+    detailedExplanation: 'NASA’s Jet Propulsion Laboratory (JPL) makes all raw, uncompressed imagery from the Perseverance rover publicly accessible within hours of transmission. The "ruins" correspond to natural basaltic wind-eroded rock formations (ventifacts) in the Jezero Crater. Independent geologists and planetary researchers worldwide monitor these unencrypted feeds; claims of hidden structures rely on manipulated contrast and conspiratorial reinterpretation.',
+    claimsBreakdown: [
+      {
+        id: 'c1',
+        claim: 'Perseverance rover recorded artificial megalithic stone ruins on Mars.',
+        verdict: 'Likely False',
+        confidence: 97,
+        evidence: 'Planetary geologists confirm the formations match natural aeolian sand-blasted sedimentary layering and volcanic basalts typical of Mars.',
+      },
+      {
+        id: 'c2',
+        claim: 'A secret video was leaked outside official NASA channels.',
+        verdict: 'Likely False',
+        confidence: 94,
+        evidence: 'The footage is derived from publicly cataloged Mastcam-Z and SuperCam images that were digitally cropped, motion-blurred, and upscaled with fictional audio overlays.',
+      }
+    ],
+    clickbait: {
+      risk: 'High',
+      score: 88,
+      signalsDetected: [
+        'Leaked insider trope: "Leaked NASA video"',
+        'Extraterrestrial sensationalism: "ancient megalithic ruins"',
+        'Concealment narrative: "exposes hidden structures"'
+      ],
+      explanation: 'Exploits high-interest space exploration topics with fabricated "leaked" framing to drive viral social media view counts.'
+    },
+    sources: [
+      {
+        id: 's1',
+        name: 'NASA Mars Exploration Program',
+        title: 'Mars 2020 Perseverance Rover Public Raw Image Archive',
+        url: 'https://mars.nasa.gov/mars2020/multimedia/raw-images',
+        date: '2024-02-28',
+        category: 'Contradicts Claim',
+        reliabilityScore: 98,
+        publisherType: 'Government Agency',
+        credibilityFactors: {
+          transparency: true,
+          authorAttribution: true,
+          peerReviewedOrFactChecked: true,
+          primarySource: true
+        },
+        snippet: 'All telemetry and unmodified camera frames from Jezero Crater are publicly searchable by Sol and camera instrument without pre-censorship.'
+      },
+      {
+        id: 's2',
+        name: 'The Planetary Society',
+        title: 'Pareidolia on Mars: Why We See Faces, Pyramids, and Tools in Red Rocks',
+        url: 'https://www.planetary.org',
+        date: '2023-07-14',
+        category: 'Provides Context',
+        reliabilityScore: 93,
+        publisherType: 'Academic Institution',
+        credibilityFactors: {
+          transparency: true,
+          authorAttribution: true,
+          peerReviewedOrFactChecked: true,
+          primarySource: false
+        },
+        snippet: 'Wind erosion, low solar sun angles, and low-resolution artifacting routinely create illusions of right angles and architectural facades in natural Martian strata.'
+      }
+    ],
+    sourceCredibility: {
+      sourceTransparency: 95,
+      authorInformation: 90,
+      crossSourceAgreement: 96,
+      primarySourceRatio: 92,
+      citationQuality: 94,
+      summary: 'Publicly verifiable photographic logs contradict the leak and architectural claims.'
+    },
+    explainableAI: {
+      evidenceFound: [],
+      contradictingEvidence: [
+        'Full public archive of unaltered Perseverance rover image telemetry',
+        'Geological analysis of Jezero crater sedimentology'
+      ],
+      linguisticPatterns: [
+        'Sensational discovery language',
+        'Fabricated "leaked" authenticity claim'
+      ],
+      sourceAgreement: 'Global scientific consensus points to natural geological weathering.',
+      missingInformation: [
+        'Original rover Sol number or timestamp for the alleged anomaly',
+        'Peer-reviewed analysis from independent astrophysicists'
+      ]
+    },
+    isDemoMode: true,
+    disclaimer: 'This assessment is generated by TruthLens AI based on rover archive data and geological principles.'
+  }
+];
