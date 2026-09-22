@@ -6,7 +6,10 @@ import { sampleFactChecks } from '../nlp/sampleDatabase.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const DATA_DIR = path.join(__dirname, '../../data');
+// Use /tmp on Vercel (serverless read-only FS), local data/ otherwise
+const DATA_DIR = process.env.VERCEL === '1'
+  ? '/tmp/truthlens-data'
+  : path.join(__dirname, '../../data');
 
 if (!fs.existsSync(DATA_DIR)) {
   fs.mkdirSync(DATA_DIR, { recursive: true });
